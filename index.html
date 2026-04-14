@@ -3,49 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>范阮越姜 | 數位社群經理 Portfolio</title>
+<title>范阮越姜 | 數位社群經理 深度資歷門戶</title>
 <style>
 :root {
---primary: #5d54a4; /* Tím trầm thanh lịch */
---secondary: #ffafcc; /* Hồng phấn soft */
---accent: #ff85a1; /* Hồng đậm nổi bật */
---bg: #fff0f3; /* Nền hồng cực nhạt */
+--primary: #5d54a4;
+--secondary: #ffafcc;
+--accent: #ff85a1;
+--bg: #fff0f3;
 --card-bg: #ffffff;
 }
 * { box-sizing: border-box; scroll-behavior: smooth; }
 body { font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif; margin: 0; background: var(--bg); color: #4a4a4a; line-height: 1.8; }
 
-/* Navigation xịn sò (Đáp ứng 20% điểm Responsive) */
 nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 15px rgba(255,182,193,0.2); z-index: 1000; display: flex; justify-content: center; padding: 15px 0; }
-nav a { text-decoration: none; color: var(--primary); margin: 0 20px; font-weight: bold; font-size: 0.9em; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
+nav a { text-decoration: none; color: var(--primary); margin: 0 20px; font-weight: bold; font-size: 0.9em; transition: 0.3s; }
 nav a:hover { color: var(--accent); border-bottom: 2px solid var(--accent); }
 
-/* Header phong cách Dashboard hiện đại */
 header { height: 60vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%); color: white; text-align: center; flex-direction: column; padding-top: 60px; }
-header img { width: 170px; height: 170px; border-radius: 50%; object-fit: cover; border: 6px solid rgba(255,255,255,0.5); box-shadow: 0 10px 25px rgba(0,0,0,0.15); margin-bottom: 20px; transition: 0.4s; }
-header img:hover { transform: scale(1.05) rotate(-2deg); }
+header img { width: 170px; height: 170px; border-radius: 50%; object-fit: cover; border: 6px solid rgba(255,255,255,0.5); box-shadow: 0 10px 25px rgba(0,0,0,0.15); margin-bottom: 20px; }
 header h1 { font-size: 3em; margin: 0; font-weight: 800; text-shadow: 2px 2px 10px rgba(0,0,0,0.1); }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 50px 20px; }
-section { background: var(--card-bg); padding: 50px; border-radius: 25px; box-shadow: 0 12px 30px rgba(255,182,193,0.1); margin-bottom: 50px; border: 1px solid #fff5f7; }
-h2 { font-size: 2.2em; color: var(--primary); margin-bottom: 35px; display: flex; align-items: center; gap: 12px; }
-h2::before { content: '🌸'; font-size: 0.8em; }
+section { background: var(--card-bg); padding: 50px; border-radius: 25px; box-shadow: 0 12px 30px rgba(255,182,193,0.1); margin-bottom: 50px; }
+h2 { font-size: 2.2em; color: var(--primary); margin-bottom: 35px; border-bottom: 3px solid var(--secondary); display: inline-block; }
 
-/* Holland Section Hoành Tráng */
-.holland-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; background: #fffcfd; border-radius: 20px; padding: 30px; border: 1px solid #ffeef2; }
-.score-box { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.score-card { background: white; padding: 15px; border-radius: 12px; border: 1px solid #ffdeeb; text-align: center; }
-.score-card h4 { margin: 0; color: var(--accent); font-size: 1.6em; }
+/* Holland Details */
+.holland-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 30px; }
+.detail-list { background: #fffcfd; padding: 20px; border-radius: 15px; border: 1px solid #ffeef2; }
+.detail-list h4 { color: var(--accent); margin-top: 0; }
 
-/* Job & Bio Content */
-.job-detail { border-left: 5px solid var(--secondary); background: #fff9fa; padding: 25px; border-radius: 0 15px 15px 0; margin-bottom: 25px; }
-.bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-.bio-card h3 { color: var(--primary); font-size: 1.3em; margin-bottom: 10px; border-bottom: 2px solid var(--secondary); display: inline-block; }
+/* Skills Section */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+.skill-category { background: #fff9fa; padding: 20px; border-radius: 15px; border: 1px solid #ffdeeb; }
+.skill-tag { display: inline-block; background: white; padding: 5px 12px; border-radius: 20px; margin: 5px; font-size: 0.85em; border: 1px solid #ffd1dc; color: var(--primary); font-weight: bold; }
+
+/* Bio Expanded */
+.bio-section { margin-top: 30px; }
+.bio-block { margin-bottom: 30px; padding-left: 20px; border-left: 4px solid var(--secondary); }
 .highlight { color: var(--accent); font-weight: bold; }
 
 footer { text-align: center; padding: 60px; color: #888; background: #fff; border-top: 1px solid #eee; }
 
-@media (max-width: 850px) { .holland-wrap, .bio-grid { grid-template-columns: 1fr; } header h1 { font-size: 2.2em; } }
+@media (max-width: 850px) { .holland-wrap, .skills-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -53,41 +52,31 @@ footer { text-align: center; padding: 60px; color: #888; background: #fff; borde
 <nav>
 <a href="#home">首頁</a>
 <a href="#holland">荷倫碼分析</a>
-<a href="#job">職涯目標</a>
-<a href="#about">自傳經歷</a>
+<a href="#skills">專業技能</a>
+<a href="#about">深度自傳</a>
 </nav>
 
 <header id="home">
-<img src="photo1.jpg" alt="Pham Nguyen Viet Khuong">
+<img src="photo1.jpg" alt="范阮越姜">
 <h1>范阮越姜</h1>
-<p>資管二A | 411314725 | 靜宜大學資訊管理系</p>
-<p style="letter-spacing: 2px; opacity: 0.9;">「用故事連結技術，用社群溫暖人心」</p>
+<p>靜宜大學 資管二A | 411314725</p>
+<p style="letter-spacing: 2px;">「融合資訊技術與社群感性的多元創作者」</p>
 </header>
 
 <div class="container">
 
 <section id="holland">
-<h2>Holland 荷倫碼興趣深度分析</h2>
+<h2>Holland 荷倫碼興趣深度解析</h2>
 <div class="holland-wrap">
-<div>
-<h3 style="color:var(--primary);">類型特質：<span class="highlight">A 藝術型</span> & <span class="highlight">S 社會型</span></h3>
-<p>根據 104 職涯測驗，我展現了鮮明的創作直覺與群眾關懷力。身為一名創作者，我擅長在非結構化的環境中發揮靈感，將冰冷的資訊轉化為動人的數位內容。</p>
-<div class="score-box">
-<div class="score-card"><span>Artistic</span><h4>8 / 10</h4></div>
-<div class="score-card"><span>Social</span><h4>6 / 10</h4></div>
-<div class="score-card"><span>Realistic</span><h4>6 / 10</h4></div>
-<div class="score-card"><span>Investigative</span><h4>4 / 10</h4></div>
-</div>
+<div class="detail-list">
+<h4>🌟 A 藝術型 (Artistic) - 創作核心</h4>
+<p>這是我最高分的維度。我擁有極強的感性直覺，不喜歡受限於僵化的規則。這體現在我對視覺美感的追求，以及將程式碼視為一種藝術創作的思考方式。我擅長非結構化的思考，這對於需要創意的社群內容經營至關重要。</p>
+<h4>🤝 S 社會型 (Social) - 群眾共感</h4>
+<p>我具備「助人者」特質，重視人際和諧。在社群經營中，我不僅是發布內容，更在乎與聽眾的共鳴與協助。這點也展現在我擔任 Buddy 協助國際生的實踐中。</p>
 </div>
 <div style="background: white; border-radius: 15px; padding: 20px; box-shadow: inset 0 0 15px rgba(255,175,204,0.15);">
 <svg viewBox="0 0 200 200" style="width: 100%; height: auto;">
 <polygon points="100,20 180,70 180,130 100,180 20,130 20,70" fill="none" stroke="#ffd1dc" stroke-width="1"/>
-<line x1="100" y1="100" x2="100" y2="20" stroke="#eee" />
-<line x1="100" y1="100" x2="180" y2="70" stroke="#eee" />
-<line x1="100" y1="100" x2="180" y2="130" stroke="#eee" />
-<line x1="100" y1="100" x2="100" y2="180" stroke="#eee" />
-<line x1="100" y1="100" x2="20" y2="130" stroke="#eee" />
-<line x1="100" y1="100" x2="20" y2="70" stroke="#eee" />
 <polygon points="100,36 148,82 148,118 100,148 52,118 40,79" fill="rgba(255, 175, 204, 0.4)" stroke="var(--accent)" stroke-width="2"/>
 <text x="100" y="15" text-anchor="middle" font-size="11" fill="var(--accent)" font-weight="bold">藝術 A</text>
 <text x="20" y="65" text-anchor="end" font-size="9" fill="#999">社會 S</text>
@@ -97,46 +86,68 @@ footer { text-align: center; padding: 60px; color: #888; background: #fff; borde
 </div>
 </section>
 
-<section id="job">
-<h2>資管專業與職涯藍圖</h2>
-<div class="job-detail">
-<h3>理想職位：<span class="highlight">社群媒體經理 (Social Media Manager)</span></h3>
-<p><strong>產業目標：</strong> 畢業後我渴望進入<strong>遊戲產業</strong>實習。遊戲是一個充滿想像力且需要高度社群互動的領域，完美契合我的資管背景與藝術創作熱情。</p>
-<p><strong>契合度分析：</strong> 我能運用在資管系學到的 Python 邏輯分析社群趨勢，並結合 A 型特質設計具美感的內容，同時發揮 S 型特質經營具溫度的遊戲社群環境。</p>
+<section id="skills">
+<h2>專業技能與工具掌握</h2>
+<div class="skills-grid">
+<div class="skill-category">
+<h4>📊 辦公自動化工具</h4>
+<span class="skill-tag">Microsoft Word (精通)</span>
+<span class="skill-tag">Microsoft Excel (精通)</span>
+<span class="skill-tag">PowerPoint (精通)</span>
+<p style="font-size: 0.85em; color: #777; margin-top: 10px;">擅長運用文書工具製作專業報告、數據統計與視覺化簡報。</p>
 </div>
-<div style="text-align: center; margin-top: 30px;">
-<img src="photo2.jpg" alt="Activity" style="width: 80%; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
-<p style="font-size: 0.85em; color: #aaa; margin-top: 10px;">(圖示：校園活動參與與專業技能進修紀錄)</p>
+<div class="skill-category">
+<h4>💻 資訊工程技術</h4>
+<span class="skill-tag">Python 邏輯開發</span>
+<span class="skill-tag">HTML5 / CSS3</span>
+<span class="skill-tag">GitHub 版本控制</span>
+<p style="font-size: 0.85em; color: #777; margin-top: 10px;">致力於將 MIS 的邏輯性與前端的美感設計結合。</p>
+</div>
+<div class="skill-category">
+<h4>🌐 多國語言發展</h4>
+<span class="skill-tag">越南語 (母語)</span>
+<span class="skill-tag">中文 (流利)</span>
+<span class="skill-tag">英語 (進階中)</span>
+<span class="skill-tag">泰語 (初階學習)</span>
+<p style="font-size: 0.85em; color: #777; margin-top: 10px;">目標成為具備跨國溝通能力的國際社群經理。</p>
+</div>
 </div>
 </section>
 
 <section id="about">
-<h2>關於我：多元創作者與生活實踐者</h2>
-<div class="bio-grid">
-<div class="bio-card">
-<h3>📚 創作者基因 (Wattpad)</h3>
-<p>我曾是 <span class="highlight">Wattpad</span> 上的熱門作者。這段創作旅程訓練了我強大的敘事邏輯。對我而言，編寫程式碼與撰寫小說一樣，都是在建構一個完整、流暢且有目的性的故事。</p>
+<h2>關於我：用熱情與責任寫下的跨國故事</h2>
+<div class="bio-section">
+<div class="bio-block">
+<h3>📚 從 Wattpad 到數位敘事</h3>
+<p>我曾是 <span class="highlight">Wattpad</span> 上的熱門小說創作者。這段經歷並非只是寫作，而是學習「如何捕捉聽眾情緒」。在資管領域，我將此轉化為系統流程與使用者經驗的優化——每個功能背後，都是一個解決使用者痛點的故事。</p>
 </div>
-<div class="bio-card">
-<h3>🎬 影音生活實驗 (Vlog)</h3>
-<p>身為一名留學生，我獨立經營個人 <span class="highlight">Vlog</span>。從腳本規劃、攝影到後製剪輯，我享受將生活點滴數位化的過程。這不僅是技術的實踐，更是我對跨文化生活的深刻觀察。</p>
+
+<div class="bio-block">
+<h3>🎬 影音創作與社群經營 (Vlog)</h3>
+<p>透過個人 <span class="highlight">Vlog</span> 頻道，我獨立掌鏡、剪輯並分析社群數據。我不只是記錄生活，更在實踐「社群媒體經理」的核心職能：內容企劃、視覺包裝與數據回饋。我的目標是進入<strong>遊戲產業</strong>，為其打造最具吸引力的數位社群。</p>
 </div>
-<div class="bio-card">
-<h3>🤝 國際學友服務 (Buddy)</h3>
-<p>雖然天生慢熱，但我熱愛社會服務。我常擔任校內的 <strong>Buddy</strong>，協助國際新生辦理入學、ARC 居留證及銀行開戶。這讓我學會如何以同理心溝通，並在實際行動中展現高度的責任感。</p>
+
+<div class="bio-block">
+<h3>🤝 國際學友服務員 (International Buddy)</h3>
+<p>身為靜宜大學的 <strong>Buddy</strong>，我負責帶領新生克服來台初期的不安。從協助辦理居留證(ARC)、開立郵局帳戶，到帶領他們熟悉校園與當地生活，這段過程磨練了我的溝通能力與高度的責任感。我深信，最好的服務源於最真誠的關懷。</p>
 </div>
-<div class="bio-card">
-<h3>🚀 專業能力與未來</h3>
-<p>目前我正積極精進 <strong>Python</strong> 程式力，並維持 <strong>英文與泰文</strong> 的語言優勢。我的目標是將資管技術、敘事創作與人際連結結合，成為一名具備國際視野的數位人才。</p>
+
+<div class="bio-block" style="border: none; background: #fff5f8; padding: 20px; border-radius: 15px;">
+<h3>🎯 未來展望</h3>
+<p>作為一名資管系的學生，我正積極提升自己的技術門檻。我將持續精進 Python 與辦公室自動化軟體應用，並發揮外語優勢，期望在遊戲與社群媒體領域，成為連結品牌與玩家、技術與創意的最佳橋樑。</p>
 </div>
+</div>
+<div style="text-align: center; margin-top: 40px;">
+<img src="photo2.jpg" alt="活動紀錄" style="width: 85%; border-radius: 20px; box-shadow: 0 10px 25px rgba(255,182,193,0.3);">
+<p style="font-size: 0.85em; color: #999;">(圖示：校園實踐與跨文化交流紀錄)</p>
 </div>
 </section>
 
 </div>
 
 <footer>
-<p>&copy; 2026 Pham Nguyen Viet Khuong. <br> 靜宜大學 資訊管理系 | 職涯規劃課程作業成果</p>
-<p><a href="https://pda.104.com.tw/profile/share/6ScSblG0zWsjfkrnlYTsz8gGanZ1nvrt" target="_blank" style="color:var(--accent); text-decoration:none; font-weight:bold;">🔗 查看 104 完整專業履歷</a></p>
+<p>&copy; 2026 Pham Nguyen Viet Khuong. <br> 靜宜大學 資訊管理系 | 職涯規劃課程專題</p>
+<p><a href="https://pda.104.com.tw/profile/share/6ScSblG0zWsjfkrnlYTsz8gGanZ1nvrt" target="_blank" style="color:var(--accent); text-decoration:none; font-weight:bold;">🔗 點此查看 104 完整履歷</a></p>
 </footer>
 
 </body>
